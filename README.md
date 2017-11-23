@@ -1,2 +1,6 @@
 # grakn-sc
-Service Catalog
+Service Catalog 
+
+Ontology
+Migrators(csv to grakn)
+CSV files not added
