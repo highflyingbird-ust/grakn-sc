@@ -1,0 +1,71 @@
+insert
+
+type sub entity
+    plays service_type
+    has name
+    has identifier;
+
+area sub entity
+    plays expertise
+    plays advantage_source
+    plays case_topic
+    plays service_line
+    has identifier
+    has name
+    has comments;
+
+
+advantage sub entity
+    has name
+    has identifier
+    plays advantage_child;
+
+case sub entity
+    has name
+    has identifier
+    plays case_expertise
+    plays case_topic_child;
+
+person sub entity
+    has name
+    has identifier
+    plays expert
+    plays case_expert;
+
+name sub resource datatype string;
+identifier sub resource datatype string;
+comments sub resource datatype string;
+
+
+service_rel sub relation
+    relates service_type
+    relates service_line;
+service_type sub role;
+service_line sub role;
+
+advantage_rel sub relation
+    relates advantage_source
+    relates advantage_child;
+advantage_source sub role;
+advantage_child sub role;
+
+expertise_rel sub relation
+    relates expertise
+    relates expert;
+expert sub role;
+expertise sub role;
+
+case_study sub relation
+    relates case_topic
+    relates case_topic_child;
+case_topic sub role;
+case_topic_child sub role;
+
+case_expertise_rel sub relation
+    relates case_expertise
+    relates case_expert;
+case_expertise sub role;
+case_expert sub role;
+
+
+

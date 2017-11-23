@@ -1,0 +1,5 @@
+match 
+	$x has identifier <area>;
+	$y has identifier <advantage>;
+insert
+	(advantage_child: $y,advantage_source: $x) isa advantage_rel;

@@ -1,0 +1,6 @@
+match
+	$x has identifier <area>;
+	$y has identifier <case>;
+
+insert
+	(case_topic:$x, case_topic_child:$y) isa case_study;

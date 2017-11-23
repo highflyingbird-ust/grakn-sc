@@ -1,0 +1,7 @@
+match
+	$x has identifier <area>;
+	$y has identifier <person>;
+	
+	
+insert
+	(expertise: $x, expert: $y) isa expertise_rel;

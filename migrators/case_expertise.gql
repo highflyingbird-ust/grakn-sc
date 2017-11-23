@@ -1,0 +1,6 @@
+match
+	$x has identifier <case>;
+	$y has identifier <person>;
+
+insert
+	(case_expert:$y,case_expertise:$x) isa case_expertise_rel;
